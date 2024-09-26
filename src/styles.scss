@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.spacer {
+  flex: 1 1 auto; /* Permite que el espacio se expanda */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.sidenav-container {
+  display: flex; /* Usar flexbox para alinear el sidenav y el contenido */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+mat-sidenav {
+  display: flex; /* Usar flexbox para el sidenav */
+  flex-direction: column; /* Organizar los elementos en columna */
+  justify-content: center; /* Centrar verticalmente los elementos */
+  align-items: center; /* Centrar horizontalmente los elementos */
+  width: 250px; /* Ancho del sidenav */
+  background-color: #f8f9fa; /* Color de fondo del sidenav */
+  padding: 16px; /* Espaciado interno */
+   flex-direction: column; // Alinea los elementos verticalmente
+  justify-content: center; // Centra los elementos verticalmente
+}
+
+mat-sidenav-content {
+  padding: 16px; /* Espaciado interno del contenido */
+  background-color: #ffffff; /* Color de fondo del contenido */
+  height: 100vh; /* Altura del contenido */
+  overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido es demasiado largo */
+}
+
+.form-container {
+  margin-top: 16px; /* Margen superior para el formulario */
+}
+
+mat-form-field {
+  width: 100%; /* Asegúrate de que los campos de formulario ocupen todo el ancho */
+}
+
+button {
+  margin-top: 16px; /* Margen superior para el botón */
+
+
+
+  mat-nav-list {
+    width: 100%; /* Asegúrate de que la lista ocupe todo el ancho */
+    display: flex; /* Usar flexbox para la lista */
+    flex-direction: column; /* Organizar elementos en columna */
+    align-items: center; /* Centrar horizontalmente los elementos */
+  }
+
+
+  mat-list-item {
+    width: 100%; /* Asegúrate de que cada elemento ocupe todo el ancho */
+    text-align: center; /* Centrar el texto */
+  }
+
+
+  .center-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centra los elementos
+    justify-content: center; // Centra los elementos
+  }
+
+}
+
+

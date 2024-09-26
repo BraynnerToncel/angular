@@ -1,0 +1,35 @@
+.container {
+  max-width: 800px; // Ajusta según tu necesidad
+  margin: 20px auto; // Centrar el contenedor
+  padding: 20px;
+
+  h2 {
+    text-align: center; // Centra el título
+  }
+
+  .card {
+    background-color: white; // Color de fondo blanco
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Sombra suave
+    border-radius: 8px; // Bordes redondeados
+    padding: 20px; // Espaciado interno
+  }
+
+
+
+
+
+
+  .action-buttons {
+    display: flex;
+    justify-content: center; // Centra los botones horizontalmente
+    align-items: center; // Centra los botones verticalmente
+    gap: 8px; // Espacio entre los botones
+    height: 100%; // Asegura que ocupe el alto de la celda
+  }
+  
+  table {
+    width: 100%;
+    table-layout: fixed; // Asegura que los elementos se distribuyan uniformemente
+  }
+
+}

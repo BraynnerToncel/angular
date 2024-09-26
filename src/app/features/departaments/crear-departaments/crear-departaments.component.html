@@ -1,0 +1,56 @@
+<div class="form-container">
+  <div class="form-wrapper">
+    <h2>Crear Departamento</h2>
+    <form [formGroup]="departamentoForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Código</mat-label>
+        <input matInput type="number" placeholder="Ingresa el código" formControlName="codigo" required>
+        <mat-error *ngIf="departamentoForm.get('codigo')?.hasError('required')">
+          El código es obligatorio.
+        </mat-error>
+        <mat-error *ngIf="departamentoForm.get('codigo')?.hasError('minlength') || departamentoForm.get('codigo')?.hasError('maxlength')">
+          El código debe tener exactamente 2 dígitos.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Ingresa el nombre" formControlName="nombre" required>
+        <mat-error *ngIf="departamentoForm.get('nombre')?.hasError('required')">
+          El nombre es obligatorio.
+        </mat-error>
+        <mat-error *ngIf="departamentoForm.get('nombre')?.hasError('maxlength')">
+          Máximo 50 caracteres permitidos.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Líder</mat-label>
+        <input matInput type="number" placeholder="Ingresa el líder" formControlName="lider" required>
+        <mat-error *ngIf="departamentoForm.get('lider')?.hasError('required')">
+          El líder es obligatorio.
+        </mat-error>
+        <mat-error *ngIf="departamentoForm.get('lider')?.hasError('minlength') || departamentoForm.get('lider')?.hasError('maxlength')">
+          El líder debe tener exactamente 7 dígitos.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Estado</mat-label>
+        <mat-select formControlName="estado" required>
+          <mat-option value="activo">Activo</mat-option>
+          <mat-option value="inactivo">Inactivo</mat-option>
+        </mat-select>
+        <mat-error *ngIf="departamentoForm.get('estado')?.hasError('required')">
+          El estado es obligatorio.
+        </mat-error>
+      </mat-form-field>
+
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit" [disabled]="departamentoForm.invalid">
+          Crear Departamento
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

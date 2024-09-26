@@ -1,0 +1,97 @@
+<div class="form-container">
+  <div class="form-wrapper">
+    <h2>Crear Usuario</h2>
+    <form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Nombres</mat-label>
+        <input matInput placeholder="Ingresa los nombres" formControlName="nombres" required>
+        <mat-error *ngIf="usuarioForm.get('nombres')?.hasError('required')">
+          Los nombres son obligatorios.
+        </mat-error>
+        <mat-error *ngIf="usuarioForm.get('nombres')?.hasError('maxlength')">
+          Máximo 50 caracteres permitidos.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Apellidos</mat-label>
+        <input matInput placeholder="Ingresa los apellidos" formControlName="apellidos" required>
+        <mat-error *ngIf="usuarioForm.get('apellidos')?.hasError('required')">
+          Los apellidos son obligatorios.
+        </mat-error>
+        <mat-error *ngIf="usuarioForm.get('apellidos')?.hasError('maxlength')">
+          Máximo 50 caracteres permitidos.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Fecha de Nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="Selecciona fecha" formControlName="fechaNacimiento" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="usuarioForm.get('fechaNacimiento')?.hasError('required')">
+          La fecha de nacimiento es obligatoria.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Ingresa el email" formControlName="email" required>
+        <mat-error *ngIf="usuarioForm.get('email')?.hasError('required')">
+          El email es obligatorio.
+        </mat-error>
+        <mat-error *ngIf="usuarioForm.get('email')?.hasError('email')">
+          Debes ingresar un email válido.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Número de Documento</mat-label>
+        <input matInput type="number" placeholder="Ingresa el número de documento" formControlName="numeroDocumento" required>
+        <mat-error *ngIf="usuarioForm.get('numeroDocumento')?.hasError('required')">
+          El número de documento es obligatorio.
+        </mat-error>
+        <mat-error *ngIf="usuarioForm.get('numeroDocumento')?.hasError('minlength')">
+          Debe tener al menos 7 caracteres.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Área</mat-label>
+        <input matInput type="string" placeholder="Ingresa el área" formControlName="area" required>
+        <mat-error *ngIf="usuarioForm.get('area')?.hasError('required')">
+          El área es obligatoria.
+        </mat-error>
+        <mat-error *ngIf="usuarioForm.get('area')?.hasError('minlength')">
+          Debe tener al menos 2 dígitos.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Salario</mat-label>
+        <input matInput type="number" placeholder="Ingresa el salario" formControlName="salario" required>
+        <mat-error *ngIf="usuarioForm.get('salario')?.hasError('required')">
+          El salario es obligatorio.
+        </mat-error>
+        <mat-error *ngIf="usuarioForm.get('salario')?.hasError('pattern')">
+          Debe ser un número con máximo 8 dígitos y 2 decimales.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Estado</mat-label>
+        <mat-select formControlName="estado">
+          <mat-option value="activo">Activo</mat-option>
+          <mat-option value="inactivo">Inactivo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit" [disabled]="usuarioForm.invalid">
+          Crear Usuario
+        </button>
+
+      </div>
+    </form>
+  </div>
+</div>
