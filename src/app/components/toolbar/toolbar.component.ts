@@ -10,7 +10,7 @@ const MATERIAL_MODULES = [MatIconModule, MatToolbarModule, MatButtonModule];
 @Component({
   selector: 'app-toolbar',
   standalone: true,
-  imports: [CommonModule, MATERIAL_MODULES], // Agrega CommonModule aquí
+  imports: [CommonModule, MATERIAL_MODULES], 
   template: `
     <mat-toolbar color="primary">
       <span class="spacer"></span>
@@ -33,11 +33,11 @@ const MATERIAL_MODULES = [MatIconModule, MatToolbarModule, MatButtonModule];
   styles: ``
 })
 export class ToolbarComponent {
-  @Output() onUserEvent = new EventEmitter<void>(); // Emite un evento al hacer clic
+  @Output() onUserEvent = new EventEmitter<void>(); 
   private currentRoute: string;
 
   constructor(private router: Router) {
-    this.currentRoute = this.router.url; // Guarda la ruta actual
+    this.currentRoute = this.router.url; 
   }
 
   emitClick(): void {
@@ -46,13 +46,13 @@ export class ToolbarComponent {
 
   // Navegación programática
   onNavigateTo(route: string): void {
-    this.router.navigate([`/${route}`]); // Navegar a la ruta seleccionada
-    this.currentRoute = `/${route}`; // Actualiza la ruta actual
-    this.emitClick(); // Emitir el evento después de la navegación
+    this.router.navigate([`/${route}`]); 
+    this.currentRoute = `/${route}`; 
+    this.emitClick(); 
   }
 
   isUserPage(): boolean {
-    return this.currentRoute === '/users'; // Comprueba si la ruta actual es 'users'
+    return this.currentRoute === '/users'; 
   }
 
 

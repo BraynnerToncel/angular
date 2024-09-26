@@ -39,13 +39,13 @@ import { ListarDepartamentsComponent } from '@features/departaments/listar-depar
   
 })
 export class SidenavDepartmentsComponent {
-  showCreate = true; // Inicia mostrando el formulario de crear
+  showCreate = true; 
 
   onShowCreate(): void {
-    this.showCreate = true; // Muestra el formulario para crear un departamento
+    this.showCreate = true; 
   }
 
   onShowList(): void {
-    this.showCreate = false; // Muestra la lista de departamentos
+    this.showCreate = false; 
   }
 }

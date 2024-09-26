@@ -5,30 +5,30 @@
   margin: 20px;
 
   .form-wrapper {
-    width: 100%; // Ocupa el ancho completo
-    max-width: 500px; // Ancho máximo del formulario
-    padding: 20px; // Espacio interno
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra para el contenedor
-    border-radius: 8px; // Bordes redondeados
-    background-color: #fff; // Fondo blanco
-    margin-bottom: 30px; // Espacio entre el formulario y el final de la página
+    width: 100%; 
+    max-width: 500px; 
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    background-color: #fff; 
+    margin-bottom: 30px; 
 
     h2 {
-      margin-bottom: 20px; // Espacio entre el título y el formulario
-      text-align: center; // Centra el título
+      margin-bottom: 20px; 
+      text-align: center; 
     }
 
     mat-form-field {
-      width: 100%; // Asegura que el campo ocupe todo el ancho
-      margin-bottom: 15px; // Espacio entre campos
-      font-size: 0.9rem; // Tamaño de fuente más pequeño
+      width: 100%; 
+      margin-bottom: 15px; 
+      font-size: 0.9rem; 
     }
 
     .button-container {
       display: flex;
       justify-content: center;
-      margin-top: 20px; // Espacio entre el botón y el último campo
-      width: 100%; // Asegura que el contenedor del botón ocupe el mismo ancho que los campos
+      margin-top: 20px; 
+      width: 100%; 
     }
   }
 }

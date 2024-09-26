@@ -27,7 +27,7 @@ export class AppComponent {
 
   constructor(private router: Router) {}
   isUserPage(): boolean {
-    return this.router.url === '/users'; // Verifica si la ruta actual es 'users'
+    return this.router.url === '/users'; 
   }
 
   title = 'prueba';

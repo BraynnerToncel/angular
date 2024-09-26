@@ -27,7 +27,6 @@ export class UsersService {
         observer.next(usuarios);
       });
 
-      // Cleanup the subscription
       return () => unsubscribe();
     });
   }
@@ -43,7 +42,7 @@ export class UsersService {
     });
   
     if (userDoc) {
-      const userDocRef = doc(this.firestore, 'usuarios', userDoc.id); // Obtiene el ID del documento
+      const userDocRef = doc(this.firestore, 'usuarios', userDoc.id); 
       await updateDoc(userDocRef, updatedUser);
     } else {
       throw new Error('Usuario no encontrado');

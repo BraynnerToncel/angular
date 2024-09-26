@@ -1,6 +1,5 @@
-// src/app/interfaces/user.interface.ts
 export interface Usuario {
-  id?: string; // Haz el ID opcional
+  id?: string; 
   nombres: string;                
   apellidos: string;              
   fechaNacimiento: Date;         

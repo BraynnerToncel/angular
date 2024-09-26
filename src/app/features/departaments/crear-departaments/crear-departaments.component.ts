@@ -36,7 +36,7 @@ export class CrearDepartamentsComponent {
       codigo: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(2)]],
       nombre: ['', [Validators.required, Validators.maxLength(50)]],
       lider: ['', [Validators.required, Validators.minLength(7), Validators.maxLength(7)]],
-      estado: ['activo', Validators.required] // Estado por defecto es "activo"
+      estado: ['activo', Validators.required] 
     });
   }
 

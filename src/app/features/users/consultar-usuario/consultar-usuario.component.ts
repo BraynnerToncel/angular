@@ -48,7 +48,7 @@ export class ConsultarUsuarioComponent implements OnInit {
   }
 
   async editarUsuario(usuario: Usuario) {
-    const updatedUser: Partial<Usuario> = { ...usuario }; // Aquí puedes modificar el usuario como desees
+    const updatedUser: Partial<Usuario> = { ...usuario }; 
     try {
       await this.usersService.updateUser(usuario.numeroDocumento, updatedUser);
       this.snackBar.open('Usuario actualizado con éxito', 'Cerrar', { duration: 3000 });
